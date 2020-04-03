@@ -4,7 +4,7 @@
 void *prime_num(void *param)
 {
    int i,j;
-    for (i=2 ;i<=100 ; i++)
+    for (i=2 ;i<=1000000 ; i++)
     {
         for (j=2; j<=i; j++)
         {
@@ -24,6 +24,6 @@ int main()
     pthread_t pid;
     pthread_create(&pid, NULL, prime_num, NULL); 
     pthread_join(pid,NULL);
-    System("PAUSE");
+    system("PAUSE");
     return 0;
 }
